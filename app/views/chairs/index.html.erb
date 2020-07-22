@@ -1,0 +1,10 @@
+<p> CHAIRS!!!! yay</p>
+
+<% @chairs.each do |chair| %>
+  <p><b>id:</b> <%= chair.id %></p>
+  <p><b>style:</b> <a href="/chairs/<%= chair.id %>"><%= chair.style%></a></p>
+  <p><b>color:</b> <%= chair.color %></p>
+  <p><b>weight:</b> <%= chair.weight %></p>
+  <p><b>legs:</b> <%= chair.legs %></p>
+  <p><b>image:</b> <%= chair.image %></p>
+<% end %>
