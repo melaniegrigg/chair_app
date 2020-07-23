@@ -9,3 +9,8 @@
   <p>Image: <input type="text" name="style" value="<%= @chair.image%>"></p>
   <p><input type="submit" value="update these chairz"></p>
 </form>
+
+<form action="/chairs/<% =@chair.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete ah chair">
+</form>

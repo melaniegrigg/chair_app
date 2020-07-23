@@ -41,5 +41,11 @@ class ChairsController < ApplicationController
     @chair.save
     redirect_to "/chairs"
   end
-  
+
+  def destroy
+    @chair = Chair.find_by(id: params[:id])
+    @chair.destroy
+    render 'index.html.erb'
+  end
+
 end
