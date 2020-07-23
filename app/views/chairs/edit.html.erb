@@ -1,0 +1,11 @@
+<p>Edit some chairs</p>
+
+<form action="/chairs/<%= @chair.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <p>Style: <input type="text" name="style" value="<%= @chair.style%>"></p>
+  <p>Weight: <input type="text" name="weight" value="<%= @chair.weight%>"></p>
+  <p>Legs: <input type="text" name="style" value="<%= @chair.legs%>"></p>
+  <p>Color: <input type="text" name="style" value="<%= @chair.color%>"></p>
+  <p>Image: <input type="text" name="style" value="<%= @chair.image%>"></p>
+  <p><input type="submit" value="update these chairz"></p>
+</form>

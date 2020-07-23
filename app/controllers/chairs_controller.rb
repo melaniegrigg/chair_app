@@ -25,4 +25,21 @@ class ChairsController < ApplicationController
     @chair.save
     redirect_to "/chairs/#{@chair.id}"
   end
+
+  def edit
+    @chair = Chair.find_by(id: params[:id])
+    render 'edit.html.erb'
+  end
+
+  def update
+    @chair = Chair.find_by(id: params[:id])
+    @chair.color = params[:color]
+    @chair.weight = params[:weight]
+    @chair.style = params[:style]
+    @chair.legs = params[:legs]
+    @chair.image = params[:image]
+    @chair.save
+    redirect_to "/chairs"
+  end
+  
 end
